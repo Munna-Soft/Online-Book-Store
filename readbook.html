@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book-Store-API | Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Book Store APP | Dashboard" />
+    <meta name="description" content="Book Store APP | Dashboard" />
+    <meta name="keywords" content="Book Store APP | Dashboard" />
+    <meta name="author" content="Munna MasterMind" />
+
+    <!--Fonts API-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+      integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" />
+
+    <!--OverlayScrollbars-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+      integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg=" crossorigin="anonymous" />
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous" />
+
+    <!--AdminLTE Plugin-->
+    <link rel="stylesheet" href="./css/adminlte.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--apexcharts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
+      integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous" />
+  
+  </head>
+
+  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    <div class="app-wrapper">
+      <nav class="app-header navbar navbar-expand bg-body">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button" >
+                <i class="bi bi-list"></i>
+              </a>
+            </li>
+            <li class="nav-item d-none d-md-block">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <!--Fullscreen Toggle-->
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-lte-toggle="fullscreen">
+                <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i>
+                <i data-lte-icon="minimize" class="bi bi-fullscreen-exit" style="display: none"></i>
+              </a>
+            </li>
+
+            <!--Admin Info-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >
+                <img src="./assets/img/Munna.jpg" class="user-image rounded-circle shadow" alt="Admin Image" />
+                <span class="d-none d-md-inline">Munna MasterMind</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                <li class="user-header text-bg-primary">
+                  <img src="./assets/img/Munna.jpg" class="rounded-circle shadow" alt="Admin Image" />
+                </li>
+
+                <li class="user-footer">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                </li>
+              </ul>
+          </ul>
+        </div>
+      </nav>
+
+      <!--Sidebar Menu-->
+      <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+        <div class="sidebar-brand">
+          <a href="" class="brand-link">
+            <img src="assets/img/Munna.jpg" alt="AdminLTE Logo" class="brand-image opacity-75 shadow" />
+            <span class="brand-text fw-light">Book Store APP</span>
+          </a>
+        </div>
+
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <ul
+              class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false" >
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link active" data-bs-toggle="collapse" data-bs-target="#authorMenu" aria-expanded="false">
+                  <i class="nav-icon bi bi-pen"></i>
+                  <p>Author Management</p>
+                </a>
+                <div class="collapse" id="authorMenu">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                      <a href="./author.html" class="nav-link"><i class="bi bi-list "></i> Author List</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link active" data-bs-toggle="collapse" data-bs-target="#customerMenu" aria-expanded="false">
+                  <i class="nav-icon bi bi-person-lines-fill"></i>
+                  <p>Customer Management</p>
+                </a>
+                <div class="collapse" id="customerMenu">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                      <a href="./customer.html" class="nav-link"><i class="bi bi-list "></i> Customer List</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link active" data-bs-toggle="collapse" data-bs-target="#bookMenu" aria-expanded="false">
+                  <i class="nav-icon bi bi-book"></i>
+                  <p>Book Management</p>
+                </a>
+                <div class="collapse" id="bookMenu">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                      <a href="./readbook.html" class="nav-link"><i class="bi bi-list "></i> Book List</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link active" data-bs-toggle="collapse" data-bs-target="#orderMenu" aria-expanded="false">
+                  <i class="nav-icon bi bi-cart-check-fill"></i>
+                  <p>Order Management</p>
+                </a>
+                <div class="collapse" id="orderMenu">
+                  <ul class="nav flex-column ms-3">
+                    <li class="nav-item">
+                      <a href="./order.html" class="nav-link"><i class="bi bi-list "></i> Order List</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+--------------------------------
+      <!--Body Content-->
+      <main class="app-main">
+        <div class="app-content-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between">
+                        <h3 class="mb-0">Book Management</h3>
+                        <button class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#addBookModal">Add New Book</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                  <th>ID</th>
+                                  <th>Title</th>
+                                  <th>Price</th>
+                                  <th>Stock</th>
+                                  <th>Author ID</th>
+                                  <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Add Book Modal-->
+    <div class="modal fade" id="addBookModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <label class="form-label">Book Name</label>
+                    <input type="text" class="form-control mb-2" id="titleID" placeholder="Book Title">
+                  <label class="form-label">Prices</label>
+                    <input type="number" class="form-control mb-2" id="priceID" placeholder="Prices">
+                  <label class="form-label">Stock Quantity</label>
+                    <input type="number" class="form-control mb-2" id="stockID" placeholder="Stock Quantity">
+                  <label class="form-label">Author ID</label>
+                    <input type="number" class="form-control mb-2" id="authorID" placeholder="Author ID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" onclick="addBook()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div class="modal fade" id="editBookModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="editBookID">
+                  <label class="form-label">Book Name</label>
+                    <input type="text" class="form-control mb-2" id="editTitleID" placeholder="Book Title">
+                  <label class="form-label">Prices</label>
+                    <input type="number" class="form-control mb-2" id="editPriceID" placeholder="Price">
+                  <label class="form-label">Stock Quantity</label>
+                    <input type="number" class="form-control mb-2" id="editStockID" placeholder="Stock Quantity">
+                  <label class="form-label">Author ID</label>
+                    <input type="number" class="form-control mb-2" id="editAuthorID" placeholder="Author ID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" onclick="updateBook()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Book Modal -->
+    <div class="modal fade" id="deleteBookModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this book?</p>
+                    <input type="hidden" id="deleteBookID">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-danger" onclick="deleteBook()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+      <!--Footer Content-->
+      <footer class="app-footer">
+        <div class="float-end d-none d-sm-inline">Munna</div>
+        <strong>Copyright &copy; 2025&nbsp;
+          <a href="#" class="text-decoration-none">Book Store APP</a>.
+        </strong>All rights reserved.</footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+      integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ=" crossorigin="anonymous">
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"crossorigin="anonymous">
+    </script>
+    
+    <script src="./js/adminlte.js"></script>
+    
+    <script>
+      const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+      const Default = {
+        scrollbarTheme: "os-theme-light",
+        scrollbarAutoHide: "leave",
+        scrollbarClickScroll: true,
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+        if (
+          sidebarWrapper &&
+          typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+        ) {
+          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+            scrollbars: {
+              theme: Default.scrollbarTheme,
+              autoHide: Default.scrollbarAutoHide,
+              clickScroll: Default.scrollbarClickScroll,
+            },
+          });
+        }
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
+      integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+    async function getBooks() {
+    let URL = "https://bs-api.sobuj.net/view/books/readBook.php";
+    let tableData = document.getElementById("bookList");
+
+    try {
+        let response = await axios.get(URL);
+        let books = response.data;
+
+        tableData.innerHTML = books.map(book => `
+            <tr>
+                <td>${book.book_id}</td>
+                <td>${book.title}</td>
+                <td>${book.price}</td>
+                <td>${book.stock_qty}</td>
+                <td>${book.author_id}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="showEditModal(${book.book_id}, '${book.title}', ${book.price}, ${book.stock_qty}, ${book.author_id})"><i class="bi bi-pencil-square"></i></button>
+                    <button class="btn btn-danger btn-sm" onclick="showDeleteModal(${book.book_id})"><i class="bi bi-trash"></i></button>
+                </td>
+            </tr>
+        `).join("");
+    } catch (error) {
+        console.error("Error fetching books:", error);
+    }
+}
+
+async function addBook() {
+    let URL = "https://bs-api.sobuj.net/view/books/insertBook.php";
+    let formData = new FormData();
+    formData.append("title", document.getElementById("titleID").value);
+    formData.append("price", document.getElementById("priceID").value);
+    formData.append("stock_qty", document.getElementById("stockID").value);
+    formData.append("author_id", document.getElementById("authorID").value);
+
+    let response = await axios.post(URL, formData);
+    if (response.status === 200) {
+        alert("Book added successfully!");
+        bootstrap.Modal.getInstance(document.getElementById("addBookModal")).hide();
+        getBooks();
+    }
+}
+
+function showEditModal(book_id, title, price, stock_qty, author_id) {
+    document.getElementById("editBookID").value = book_id;
+    document.getElementById("editTitleID").value = title;
+    document.getElementById("editPriceID").value = price;
+    document.getElementById("editStockID").value = stock_qty;
+    document.getElementById("editAuthorID").value = author_id;
+    new bootstrap.Modal(document.getElementById("editBookModal")).show();
+}
+
+async function updateBook() {
+    let URL = "https://bs-api.sobuj.net/view/books/updateBook.php";
+    let formData = new FormData();
+    formData.append("book_id", document.getElementById("editBookID").value);
+    formData.append("title", document.getElementById("editTitleID").value);
+    formData.append("price", document.getElementById("editPriceID").value);
+    formData.append("stock_qty", document.getElementById("editStockID").value);
+    formData.append("author_id", document.getElementById("editAuthorID").value);
+
+    let response = await axios.post(URL, formData);
+    if (response.status === 200) {
+        alert("Book updated successfully!");
+        bootstrap.Modal.getInstance(document.getElementById("editBookModal")).hide();
+        getBooks();
+    }
+}
+
+function showDeleteModal(book_id) {
+    document.getElementById("deleteBookID").value = book_id;
+    new bootstrap.Modal(document.getElementById("deleteBookModal")).show();
+}
+
+async function deleteBook() {
+    let URL = "https://bs-api.sobuj.net/view/books/deleteBook.php";
+    let formData = new FormData();
+    formData.append("book_id", document.getElementById("deleteBookID").value);
+
+    let response = await axios.post(URL, formData);
+    if (response.status === 200) {
+        alert("Book deleted successfully!");
+        bootstrap.Modal.getInstance(document.getElementById("deleteBookModal")).hide();
+        getBooks();
+    }
+}
+
+getBooks();
+
+    </script>
+
+  </body>
+
+</html>
